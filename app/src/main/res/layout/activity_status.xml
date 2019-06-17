@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatusActivity">
+
+    <include
+        android:id="@+id/status_toolbar"
+        layout="@layout/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edit_status"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_toolbar"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/show_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/your_status" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/update_status_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_status"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:text="@string/save_changes"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:theme="@style/MyButton2" />
+
+</RelativeLayout>
